@@ -1,0 +1,18 @@
+<?php 
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang='vi'>
+	<head>
+		<title>Test Session </title>
+	</head>
+	<body>
+		<?php
+			$_SESSION['subject'] = 'Ngôn ngữ lập trình PHP';
+			$_SESSION['grade'] = 10;
+			echo "Session variable are set. <br>";
+		?>
+		
+	</body>
+</html>

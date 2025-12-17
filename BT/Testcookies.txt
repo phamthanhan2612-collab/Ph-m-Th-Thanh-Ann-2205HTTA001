@@ -1,0 +1,32 @@
+<?php
+
+    setcookie('username', 'Nguyễn Ngoc Anh',
+		[			
+			'expires' => time() + 3600,  //Có giá trị trong 1 giờ
+			'path' => "/BT_file",
+			'secure' => true,
+			'httponly' => true,
+		]); 
+    if (isset($_COOKIE['username']))
+	{
+		echo "Xin chào bạn " . htmlspecialchars($_COOKIE['username']);		
+	}
+	else
+	{
+		echo "Không có cookies!";
+	}   
+  //Hủy cookies
+/*
+	setcookie('username', '', time() - 3600, "/myweb"); //Có giá trị trong 1 giờ
+	
+	if (isset($_COOKIE['username']))
+	{
+		echo "Xin chào bạn " . htmlspecialchars($_COOKIE['username']);		
+	}
+	else
+	{
+		echo "Không có cookies!";
+	}
+*/
+
+?>
